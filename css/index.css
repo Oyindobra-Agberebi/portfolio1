@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+}
+
+main {
+  background-color: #EBECDF;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1px;
+}
+
+.container {
+  margin: 2em 2em 0;
+}
+
+/*Navigation start*/
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.active {
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+.res {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.res button {
+  padding: 0.8em 2.5em;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #005266;
+  color: #FFFFFF;
+}
+.res i {
+  font-size: 1.875em;
+}
+
+/*Navigation end*/
+/*Main section start*/
+h1 {
+  font-size: 5em;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+}
+
+/*Main section end*/
+@media (max-width: 375px) {
+  /*Navigation start*/
+  .nav-links {
+    display: none;
+  }
+  /*Navigation end*/
+  /*Main section start*/
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-container .profile-img {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-container .profile-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .skill-icons {
+    margin: auto;
+    background-color: green;
+    width: 70%;
+  }
+  .skill-icons .icons1 {
+    display: flex;
+    align-items: center;
+    gap: 1.45em;
+    margin-left: 5px;
+  }
+  .skill-icons i {
+    font-size: 2.2em;
+  }
+  .skill-icons .icons2 {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+  }
+  /*Main section end*/
+}
+
+/*# sourceMappingURL=index.css.map */

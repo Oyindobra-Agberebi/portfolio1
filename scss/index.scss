@@ -1,0 +1,147 @@
+@import './reset';
+@import './variables';
+
+
+@mixin flexBox {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    background-color: $backgroundLightGreen;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1px;
+}
+
+.container {
+    margin: 2em 2em 0;
+}
+
+/*Navigation start*/
+.navigation {
+    width: 100%;
+    @include flexBox();
+    justify-content: space-between
+    
+}
+
+.nav-links {
+    width: 60%;
+    // background-color: green;
+    @include flexBox();
+    justify-content: space-between;
+
+}
+
+nav  ul {
+    @include flexBox();
+    list-style: none;
+    gap: 2em;
+
+    li a{
+        text-decoration: none;
+        color: $blackColor;
+        font-family: $playFair;
+        font-weight: 600;
+        
+    }
+}
+
+.active {
+    border-bottom: 2px solid black;
+    color: black
+}
+
+.res {
+    @include flexBox();
+    gap: 2em;
+
+    button {
+        padding: .8em 2.5em;
+        font-family: $algreya;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        background-color: $subTitleAndResume;
+        color: $whiteColor;
+    }
+
+    i {
+        font-size: 1.875em;
+    }
+}
+
+
+
+/*Navigation end*/
+
+
+/*Main section start*/
+h1{
+    font-size: 5em;
+}
+
+
+.hero-container {
+    @include flexBox();
+}
+/*Main section end*/
+
+
+
+@media (max-width: 375px) {
+    /*Navigation start*/
+
+.nav-links {
+display: none
+
+}
+
+/*Navigation end*/
+
+/*Main section start*/
+h1{
+    font-size: 3em;
+    text-align: center
+}
+
+
+.hero-container {
+    flex-direction: column;
+
+    .profile-img {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.skill-icons {
+    margin: auto;
+    background-color: green;
+    width: 70%;
+
+    .icons1 {
+        @include flexBox();
+        gap: 1.45em;
+        margin-left: 5px;
+    }
+
+    i {
+        font-size: 2.2em;
+    }
+
+    .icons2 {
+        @include flexBox();
+        gap: .8em;
+    }
+}
+
+/*Main section end*/
+
+}
