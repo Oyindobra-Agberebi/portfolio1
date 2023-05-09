@@ -67,7 +67,7 @@ nav ul li a::after {
   content: "";
   height: 4px;
   right: 0;
-  bottom: 0px;
+  bottom: -5px;
   width: 0%;
   background-color: $buttonColor;
   position: absolute;
