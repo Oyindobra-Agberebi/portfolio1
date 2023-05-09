@@ -15,27 +15,77 @@
   justify-content: space-between;
   align-items: center;
 
-  .nav-links {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    transition: .5s ease-in-out;
-
-    .links {
-        padding-top: 5em;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: $backgroundLightBlue;
-      gap: 4em;
-    }
-  }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-links {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: .5s ease-in-out;
+  background-color: $backgroundLightBlue;
+
+  .links {
+    padding-top: 5em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+  }
+}
 
 
 nav ul {
@@ -47,15 +97,17 @@ nav ul {
   li {
     margin: auto;
     text-align: center;
+
+    a {
+      text-decoration: none;
+      font-family: $algreya;
+      font-weight: 400;
+      font-size: 2em;
+      color: $buttonColor;
+    }
   }
 
-  li a {
-    text-decoration: none;
-    font-family: $algreya;
-    font-weight: 400;
-    font-size: 2em;
-    color: $buttonColor;
-  }
+ 
 }
 
 nav ul a::after {
@@ -64,13 +116,16 @@ nav ul a::after {
   width: 0%;
   background-color: $buttonColor;
   display: block;
-  margin: auto;
   transition: 0.5s ease-in-out;
+  transform-origin: left;
 }
 
 nav li a:hover::after {
+  transform-origin: right;
   width: 100%;
 }
+
+
 
 .res {
   button {
