@@ -104,25 +104,29 @@ nav ul {
       font-weight: 400;
       font-size: 2em;
       color: $buttonColor;
+      position: relative;
     }
   }
 
  
 }
 
-nav ul a::after {
+nav ul li a::after {
   content: "";
   height: 4px;
+  right: 0;
+  bottom: 0px;
   width: 0%;
   background-color: $buttonColor;
-  display: block;
+  position: absolute;
   transition: 0.5s ease-in-out;
-  transform-origin: left;
 }
 
-nav li a:hover::after {
-  transform-origin: right;
+nav ul li a:hover::after {
   width: 100%;
+  right: auto;
+  left: 0;
+
 }
 
 
