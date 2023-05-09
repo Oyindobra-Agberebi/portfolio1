@@ -1,157 +1,123 @@
-@import './reset';
-@import './variables';
-
-
-@mixin flexBox {
-    display: flex;
-    align-items: center;
-}
-
-main {
-    background-color: $backgroundLightGreen;
-    width: 100%;
-    min-height: 100vh;
-    padding: 1px;
-}
+@import "./reset";
+@import "./variables";
 
 .container {
-    margin: 2em 2em 0;
+  height: 100vh;
+  width: 100%;
+  padding: 0.575em 1.075em 0;
 }
 
 /*Navigation start*/
 .navigation {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-links {
+    height: 100vh;
     width: 100%;
-    @include flexBox();
-    justify-content: space-between
-    
-}
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: .5s ease-in-out;
 
-.nav-links {
-    width: 60%;
-    // background-color: green;
-    @include flexBox();
-    justify-content: space-between;
-
-}
-
-nav  ul {
-    @include flexBox();
-    list-style: none;
-    gap: 2em;
-
-    li a{
-        text-decoration: none;
-        color: $blackColor;
-        font-family: $playFair;
-        font-weight: 600;
-        
+    .links {
+        padding-top: 5em;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $backgroundLightBlue;
+      gap: 4em;
     }
+  }
 }
 
-.active {
-    border-bottom: 2px solid black;
-    color: black
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  li {
+    margin: auto;
+    text-align: center;
+  }
+
+  li a {
+    text-decoration: none;
+    font-family: $algreya;
+    font-weight: 400;
+    font-size: 2em;
+    color: $buttonColor;
+  }
+}
+
+nav ul a::after {
+  content: "";
+  height: 4px;
+  width: 0%;
+  background-color: $buttonColor;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+
+nav li a:hover::after {
+  width: 100%;
 }
 
 .res {
-    @include flexBox();
-    gap: 2em;
+  button {
+    padding: 0.7em 2em;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    background-color: $subTitleAndResume;
+    color: $backgroundLightGreen;
 
-    button {
-        padding: .8em 2.5em;
-        font-family: $algreya;
-        font-weight: 500;
-        border: none;
-        outline: none;
-        background-color: $subTitleAndResume;
-        color: $whiteColor;
-    }
+    &:hover {
+        font-weight: 600;
+      }
+  }
 
-    i {
-        font-size: 1.875em;
-    }
+
+  i {
+    font-size: 2em;
+    position: absolute;
+    top: .5em;
+    left: .5em;
+  }
 }
 
-
-
-/*Navigation end*/
-
-
-/*Main section start*/
-h1{
-    font-size: 5em;
-}
-
-
-.hero-container {
-    @include flexBox();
-}
-/*Main section end*/
-
-
-
-@media only screen and (max-width: 375px) {
-    /*Navigation start*/
-
-.nav-links {
-display: none
-
-}
-
-/*Navigation end*/
-
-/*Main section start*/
-h1{
-    font-size: 3em;
-    text-align: center
-}
-h2 {
+.socials {
+  display: flex;
+  gap: 1em;
+  a i{
     font-size: 2.5em;
-    text-align: center;
-}
+    color: $buttonColor;
 
-p {
-    text-align: center;
-    padding: 1em;
-}
-
-
-.hero-container {
-    flex-direction: column;
-
-    .profile-img {
-        width: 100%;
-        height: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
+    &:hover {
+      font-weight: 600;
     }
+  }
 }
 
-.skill-icons {
-    margin: auto;
-    background-color: green;
-    width: 66%;
-
-    .icons1 {
-        @include flexBox();
-        gap: 1.45em;
-        margin-left: 5px;
-    }
-
-    i {
-        font-size: 2.2em;
-    }
-
-    .icons2 {
-        @include flexBox();
-        gap: .8em;
-    }
+.open {
+    font-size: 1.7em;
 }
 
-
-/*Main section end*/
+.close {
+    position: absolute;
+    top: .5em;
+    right: .6em;
+    font-size: 2em;
 
 }
+
+/*Navigation end*/
