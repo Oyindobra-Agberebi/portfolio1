@@ -49,6 +49,7 @@
     right: -100%;
     transition: 0.5s ease-in-out;
     background-color: $backgroundLightBlue;
+    z-index: 999;
   
     .links {
       padding-top: 4em;

@@ -13,7 +13,7 @@ main {
   width: 100%;
   height: 100vh;
   background-color: #EBECDF;
-  padding: 1px;
+  padding-top: 1px;
 }
 
 h1, h2 {
@@ -47,6 +47,7 @@ i, button, a {
   right: -100%;
   transition: 0.5s ease-in-out;
   background-color: #DFEBEC;
+  z-index: 999;
 }
 .nav-links .links {
   padding-top: 4em;

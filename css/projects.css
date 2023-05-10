@@ -13,7 +13,7 @@ main {
   width: 100%;
   height: 100vh;
   background-color: #EBECDF;
-  padding: 1px;
+  padding-top: 1px;
 }
 
 h1, h2 {
@@ -47,6 +47,7 @@ i, button, a {
   right: -100%;
   transition: 0.5s ease-in-out;
   background-color: #DFEBEC;
+  z-index: 999;
 }
 .nav-links .links {
   padding-top: 4em;
@@ -137,5 +138,73 @@ nav li a:hover::after {
 }
 
 /*Navigation end*/
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.main .text p {
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.card {
+  height: 290px;
+  width: 290px;
+  background-color: green;
+  margin: auto;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-color: red;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  transition: 1s;
+  transform: scale(0.1);
+  visibility: hidden;
+}
+
+.card-text {
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5em;
+}
+.card-text .icons {
+  display: flex;
+  gap: 4em;
+}
+.card-text .icons i {
+  color: white;
+  font-size: 2.5em;
+}
+
+.card:hover .card-body {
+  transform: scale(1);
+  visibility: visible;
+}
 
 /*# sourceMappingURL=projects.css.map */
