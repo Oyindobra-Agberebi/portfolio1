@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   width: 100%;
   height: 100vh;
@@ -14,13 +15,17 @@ main {
   height: 100vh;
   background-color: #EBECDF;
   padding-top: 1px;
+  padding-bottom: 1px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Playfair Display", serif;
 }
 
-i, button, a {
+i,
+button,
+a {
   cursor: pointer;
 }
 
@@ -46,7 +51,7 @@ i, button, a {
   top: 0;
   right: -100%;
   transition: 0.5s ease-in-out;
-  background-color: #DFEBEC;
+  background-color: #dfebec;
   z-index: 999;
 }
 .nav-links .links {
@@ -96,15 +101,15 @@ nav li a:hover::after {
   left: 0;
 }
 
-.res button {
+.res .btn {
   padding: 0.7em 2em;
   font-size: 1.5em;
   border: none;
   outline: none;
   background-color: #005266;
-  color: #EBECDF;
+  color: #ebecdf;
 }
-.res button:hover {
+.res .btn:hover {
   font-weight: 600;
 }
 .res i {
@@ -126,11 +131,10 @@ nav li a:hover::after {
   font-weight: 600;
 }
 
-.open {
+.navigation .open {
   font-size: 1.7em;
 }
-
-.close {
+.navigation .close {
   position: absolute;
   top: 0.5em;
   right: 0.6em;
